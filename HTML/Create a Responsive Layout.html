@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout</title>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styling */
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        /* Layout Container */
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 25%;
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            min-height: 100vh; /* Full height */
+        }
+
+        /* Main Content Area */
+        .content {
+            width: 75%;
+            padding: 20px;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Responsive Layout - Stack Sidebar and Content */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar, .content {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="header">My Website</div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Navigation Links</p>
+        </div>
+
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>This is the main content area.</p>
+        </div>
+    </div>
+
+    <div class="footer">© 2025 Yeswanth</div>
+
+</body>
+</html>

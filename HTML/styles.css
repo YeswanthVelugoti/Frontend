@@ -1,0 +1,64 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Flexbox Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Column Styling */
+.column {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Column Widths */
+.left, .right {
+    flex: 1; /* Equal width for left and right columns */
+    min-width: 200px; /* Prevents collapsing */
+}
+
+.center {
+    flex: 2; /* Center column is wider */
+    min-width: 300px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Responsive Design: Stack Columns on Small Screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack columns */
+    }
+
+    .column {
+        width: 100%; /* Full width for each column */
+    }
+}

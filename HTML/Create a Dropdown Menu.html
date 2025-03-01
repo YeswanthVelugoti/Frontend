@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Navigation</title>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: left;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        /* Hover Effect */
+        .navbar ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 150px;
+            text-align: left;
+        }
+
+        .dropdown li {
+            display: block;
+        }
+
+        .dropdown li a {
+            padding: 10px;
+            display: block;
+        }
+
+        /* Show Dropdown on Hover */
+        .navbar ul li:hover .dropdown {
+            display: block;
+        }
+
+        /* Arrow Indicator */
+        .dropdown-arrow::after {
+            content: " ▼";
+            font-size: 12px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#" class="dropdown-arrow">Services</a>
+                <ul class="dropdown">
+                    <li><a href="https://www.geeksforgeeks.org/backend-development/">Backend Development</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/front-end-development/">Frontend Development</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/what-is-full-stack-development/">Fullstack Development</a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.linkedin.com/in/yeswanth-velugoti-4290741a0/">About</a></li>
+            <li><a href="https://www.linkedin.com/in/yeswanth-velugoti-4290741a0/">Contact</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
