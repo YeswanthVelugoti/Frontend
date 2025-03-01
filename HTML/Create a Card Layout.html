@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout</title>
+
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Grid container */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Card styling */
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Card image */
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* Card content */
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-5px); /* Slight lift */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="image1.jpg" alt="Card Image">
+            <div class="card-content">
+                <h3>TIGER</h3>
+                <p>I am a TIGER.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image2.jpg" alt="Card Image">
+            <div class="card-content">
+                <h3>ELEPHENT</h3>
+                <p>I am an ELEPHENT.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image3.jpg" alt="Card Image">
+            <div class="card-content">
+                <h3>PANDA</h3>
+                <p>I am a PANDA.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centering the Button */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4; /* Light background */
+}
+
+/* Button Styling */
+.animated-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    outline: none;
+}
+
+/* Click Effect */
+.animated-button:active {
+    animation: clickEffect 0.5s ease-in-out;
+}
+
+/* Keyframes for Click Animation */
+@keyframes clickEffect {
+    0% {
+        transform: scale(1);
+        background-color: #007bff;
+    }
+    50% {
+        transform: scale(1.2);
+        background-color: #0056b3;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #007bff;
+    }
+}
